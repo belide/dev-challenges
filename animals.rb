@@ -8,25 +8,32 @@ class Bird
 end
 
 class Dog
-	def name=(new_value)
-		@name = new_value
-	end
-	
-	def name
-		@name
-	end
-	
-	def age=(new_value) 
-		@age = new_value
-	end
+	attr_reader :name, :age
 
-	def age
-		@age
+	def name=(value)
+		if value == ""
+			raise "Name can't be blank!"
+		end
+		@name = value
 	end
-
+	def age=(value)
+		if value < 0 || value > 50
+			raise "Age #{value} is invalid!"
+		end
+		@age = value
+	end
 	def report_age
 		puts "#{@name} is #{@age} years old"
 	end
+
+	def move(destination)
+		puts "#{@name} runs to the #{destination}"
+	end
+
+	def talk
+		puts "#{@name} says Bark!"
+	end
+
 end
 
 class Cat
@@ -38,14 +45,11 @@ class Cat
 	end
 end
 
-fido = Dog.new
-fido.name = "Fido"
-fido.age = 2
-rex = Dog.new
-rex.name = "Rex"
-rex.age = 4
-fido.report_age
-rex.report_age
+dog = Dog.new
+dog.name = "Fido"
+dog.age = 12
+dog.report_age
+dog.talk
 
 
 # bird.talk (bird_name)
