@@ -8,11 +8,24 @@ class Bird
 end
 
 class Dog
-	def talk(name)
-		puts "#{name} says bark!"
+	def dog_name
+		@name = "Lucy"
 	end
-	def move(name, destination)
-		puts "#{name} is running to the #{destination}"
+	
+	def talk
+		puts "#{@name} says bark!"
+	end
+	
+	def move(destination)
+		puts "#{@name} is running to the #{destination}"
+	end
+
+	def dog_age
+		@age = 6
+	end
+
+	def report_age
+		puts "#{@name} is #{@age} years old"
 	end
 end
 
@@ -25,15 +38,12 @@ class Cat
 	end
 end
 
-bird = Bird.new
-bird_name = "Twitter"
 dog = Dog.new
-dog_name = "Lucy"
-cat = Cat.new
-cat_name = "Dice"
+dog.dog_name
+dog.move("yard")
+dog.dog_age
+dog.report_age
 
 
-bird.move(bird_name, "tree")
-dog.talk (dog_name)
-bird.talk (bird_name)
-cat.move(cat_name, "house")
+# bird.talk (bird_name)
+# cat.move(cat_name, "house")
