@@ -1,35 +1,39 @@
 class Bird
-	def talk
-		puts "Chirp! Chirp!"
+	def talk (name)
+		puts "#{name} says chirp! Chirp!"
 	end
-	def move(destination)
-		puts "Flying to the #{destination}"
+	def move(name, destination)
+		puts "#{name} is flying to the #{destination}"
 	end
 end
 
 class Dog
-	def talk
-		puts "Bark!"
+	def talk(name)
+		puts "#{name} says bark!"
 	end
-	def move (destination)
-		puts "Running to the #{destination}"
+	def move(name, destination)
+		puts "#{name} is running to the #{destination}"
 	end
 end
 
 class Cat
-	def talk
-		puts "Meow!"
+	def talk(name)
+		puts "#{name} says meow!"
 	end
-	def move (destination)
-		puts "Walking to the #{destination}"
+	def move(name, destination)
+		puts "#{name} is walking to the #{destination}"
 	end
 end
 
 bird = Bird.new
+bird_name = "Twitter"
 dog = Dog.new
+dog_name = "Lucy"
 cat = Cat.new
+cat_name = "Dice"
 
-bird.move("tree")
-dog.talk
-bird.talk
-cat.move("house")
+
+bird.move(bird_name, "tree")
+dog.talk (dog_name)
+bird.talk (bird_name)
+cat.move(cat_name, "house")
