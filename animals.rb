@@ -47,7 +47,7 @@ end
 
 dog = Dog.new
 dog.name = "Fido"
-dog.age = 12
+dog.age = 10
 dog.report_age
 dog.talk
 
