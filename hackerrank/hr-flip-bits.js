@@ -6,9 +6,6 @@ function processData(input) {
 
     for(i = 1; i <= size; i++){
         let binary = (input[i] >>>0).toString(2);
-        while (binary.length < 32) {
-            binary = '0' + binary;
-        }
         binary = '0b' + binary;
         let xor = 0b11111111111111111111111111111111;
         binary = xor - binary;
