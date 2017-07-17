@@ -1,2 +1,3 @@
 # dev_games
-My 11-year old is experimenting with coding. I help him as much as I can. Here Vlad's having fun with Ruby and JS.
+
+In this repo you can find some of the basic games my son and I coded for our own amusement as well as a set of my solutions to various HackRank challenges.
