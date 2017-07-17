@@ -2,14 +2,15 @@
 
 function solve(n) {
     //converting n to binary
-    var num  = n.toString(2);
+    const num  = n.toString(2);
     
     //setting counter of zeroes to, well, zero
-    var counter = 0;
+    let counter = 0;
    
+    let result;
 
     //looping over ones and zeroes, counting zeroes
-    for(var i = 0; i < num.length; i++) {
+    for(let i = 0; i < num.length; i++) {
         if(num[i] === '0') {
             counter++;
         }
@@ -17,13 +18,14 @@ function solve(n) {
     
     //if n was a zero in the first place, returning 1 since 0 XOR 0 === 0 + 0.
     if(n === 0) {
-        var result = 1;
+        result = 1;
     }else if(n !== 0) {
         //the answer we are looking for is the 2 (our base) to the number-of-zeroes-th power.
         
-        var result = Math.pow(2, counter);
+        result = Math.pow(2, counter);
+        console.log(result);
     }
-    console.log(result);
-};
+    
+}
 
-solve(1099511627776);
+solve(1399511627776);
