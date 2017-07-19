@@ -6,7 +6,7 @@ function processData(input) {
     let result;
     
     for(i = 1; i <= size; i++){
-        let binary = new Number(input[i]);
+        let binary = input[i];
         result = (binary ^ 0xffffffff) >>> 0;
         console.log(result);
     } 
