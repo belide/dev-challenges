@@ -1,3 +1,5 @@
+///// O(n2). Must imporve to 0(n)
+
 function maxXor(l, r) {
     console.log(l,r);
     collection = [];
